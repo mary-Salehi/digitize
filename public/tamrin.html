@@ -7,163 +7,36 @@
     <link rel="stylesheet" href="./build/tailwind.css">
 </head>
 <body class="bg-gray-200">
-    <div class="">
-        <button class="sidebar-open-btn bg-orange-500 text-white p-4">click me</button>
-    </div>
-    <!-- sidebar -->
-    <div class="col-span-4 row-span-2 lg:col-span-3 xl:col-span-2 fixed bottom-0 left-0 right-0">
-        <div class="sidebar transition-[height] duration-500 h-0 p-0 bg-white flex flex-col gap-y-7  rounded-tr-3xl rounded-tl-3xl max-h-[calc(100vh_-_144px)] overflow-auto scroll-py-4 sticky top-[108px] lg:top-[124px]">
-            <!-- categories -->
-            <div>
-                <div class="text-orange-500 font-bold text-xl mb-5">دسته بندی</div>
-                <ul class="sidebar__catagories space-y-2 text-slate-800 font-medium">
-                    <li class="text-base hover:bg-gray-100">
-                        <a class="sidebar__link flex items-center gap-x-2 py-2" href="#section-phone">
-                            <span>
-                                <svg width="20" height="25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 12.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 9.75 1.75 9 4.75 9h4.5c3 0 3.75.75 3.75 3.75ZM8.5 11.625h-3" stroke="#222F5D" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 21.825A1.163 1.163 0 1 0 7 19.5a1.163 1.163 0 0 0 0 2.325Z" stroke="#222F5D" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.5" cy="9.5" r="9.5" fill="#AFAFAF" fill-opacity=".29"/></svg>
-                            </span>
-                            <span>تلفن همراه</span>
-                        </a>
-                    </li>
-                    <li class="text-base hover:bg-gray-100">
-                        <a class="sidebar__link flex items-center gap-x-2 py-2" href="#section-laptop">
-                            <span>
-                                <svg width="21" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11.5" cy="9.5" r="9.5" fill="#AFAFAF" fill-opacity=".29"/><path d="M4.293 8.334H11.7c2.373 0 2.967.593 2.967 2.96v4.22c0 2.373-.594 2.96-2.96 2.96H4.293c-2.366.006-2.96-.587-2.96-2.954v-4.226c0-2.367.594-2.96 2.96-2.96ZM8 18.48v3.187M1.333 15.666h13.334M5 21.666h6" stroke="#222F5D" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </span>
-                            <span>لپ تاپ</span>
-                        </a>
-                    </li>
-                    <li class="text-base hover:bg-gray-100">
-                        <a class="sidebar__link flex items-center gap-x-2 py-2" href="#section-watch">
-                            <span>
-                                <svg width="21" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11.5" cy="9.5" r="9.5" fill="#AFAFAF" fill-opacity=".29"/><path d="M5.666 18.667h4.667c1.553 0 2.333-.78 2.333-2.334v-4.666c0-1.553-.78-2.333-2.333-2.333H5.666c-1.553 0-2.333.78-2.333 2.333v4.667c0 1.553.78 2.333 2.333 2.333ZM10.666 7.333H5.333M10.666 20.666H5.333" stroke="#222F5D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.667 12.334v2h2" stroke="#222F5D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </span>
-                            <span>ساعت هوشمند</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!-- opend filters -->
-            <div>
-                <div class="text-orange-500 font-bold text-xl mb-5">فیلتر</div>
-                <div class="pr-2">
-                    <!-- ACC. NO.1 -->
-                    <div x-data="{isOpenBrand: true}" class="">
-                        <!-- ACC header -->
-                        <div @click="isOpenBrand = !isOpenBrand" class="flex items-center justify-between w-full py-2 cursor-pointer hover:bg-gray-100 rounded-lg my-4">
-                            <div class="flex items-center gap-x-2">
-                                <span>
-                                    <svg width="20" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10.5" cy="9.5" r="9.5" fill="#AFAFAF" fill-opacity=".29"/><path d="M12.833 21.271H1.167a.44.44 0 0 1-.438-.438.44.44 0 0 1 .438-.437h11.666a.44.44 0 0 1 .438.438.44.44 0 0 1-.438.437Z" fill="#222F5D"/><path d="M2.158 20.833h-.875l.03-7.017c0-.496.227-.957.618-1.26l4.083-3.18a1.61 1.61 0 0 1 1.972 0l4.083 3.174c.385.303.619.776.619 1.266v7.017h-.875v-7.012a.747.747 0 0 0-.28-.577L7.449 10.07a.735.735 0 0 0-.898 0L2.468 13.25a.727.727 0 0 0-.28.571l-.03 7.012Z" fill="#222F5D"/><path d="M9.917 21.27H4.083a.44.44 0 0 1-.437-.437v-5.541c0-.724.589-1.313 1.312-1.313h4.084c.723 0 1.312.59 1.312 1.313v5.541a.44.44 0 0 1-.437.438Zm-5.396-.874h4.958V15.29a.44.44 0 0 0-.437-.437H4.958a.44.44 0 0 0-.437.438v5.104Z" fill="#222F5D"/><path d="M5.833 18.791a.44.44 0 0 1-.437-.437v-.875a.44.44 0 0 1 .437-.438.44.44 0 0 1 .438.438v.875a.44.44 0 0 1-.438.438ZM7.875 12.813h-1.75a.44.44 0 0 1-.438-.438.44.44 0 0 1 .438-.438h1.75a.44.44 0 0 1 .438.438.44.44 0 0 1-.438.438Z" fill="#222F5D"/></svg>
-                                </span>
-                                <span>برند محصول</span>
-                            </div>
-                            <span class="transition-all ease-in duration-300" :class="isOpenBrand ? 'rotate-180' : '' ">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                    <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
-                                </svg>
-                            </span>
-                        </div>
-                        <!-- ACC content -->
-                        <div x-show="isOpenBrand === true" class="flex flex-col gap-y-2">
-                            <label class="flex items-center py-1 gap-x-2 cursor-pointer" for="apple">
-                                <input class="form-checkbox rounded text-orange-500 focus:ring-orange-500" type="checkbox" name="brand" id="apple">
-                                <span>اپل</span>
-                            </label>
-                            <label class="flex items-center py-1 gap-x-2 cursor-pointer" for="xiaumi">
-                                <input class="form-checkbox rounded text-orange-500 focus:ring-orange-500" type="checkbox" name="brand" id="xiaumi">
-                                <span>شیائومی</span>
-                            </label>
-                            <label class="flex items-center py-1 gap-x-2 cursor-pointer" for="samsung">
-                                <input class="form-checkbox rounded text-orange-500 focus:ring-orange-500" type="checkbox" name="brand" id="samsung">
-                                <span>سامسونگ</span>
-                            </label>
-                        </div>
-                    </div>
-                    <!-- ACC. NO.2 -->
-                    <div x-data="{isOpenColor: true}" class="">
-                        <!-- ACC header -->
-                        <div @click="isOpenColor = !isOpenColor" class="flex items-center justify-between w-full py-2 cursor-pointer hover:bg-gray-100 rounded-lg my-4">
-                            <div class="flex items-center gap-x-2">
-                                <span><svg width="19" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.833 9.625V17.5c0 .63-.256 1.207-.665 1.627l-.023.024a1.83 1.83 0 0 1-.163.146 2.041 2.041 0 0 1-.578.35c-.064.029-.128.052-.192.075-.228.076-.473.111-.712.111a2.48 2.48 0 0 1-.467-.046c-.075-.018-.151-.035-.227-.059a2.117 2.117 0 0 1-.268-.099c0-.006 0-.006-.006 0a2.946 2.946 0 0 1-.467-.286l-.006-.006a1.598 1.598 0 0 1-.21-.186c-.064-.07-.128-.14-.192-.216a2.94 2.94 0 0 1-.286-.467c.006-.006.006-.006 0-.006 0 0 0-.006-.006-.011a3.334 3.334 0 0 1-.093-.257c-.024-.076-.041-.152-.059-.227a2.483 2.483 0 0 1-.046-.467V9.625c0-.875.583-1.459 1.458-1.459h1.75c.875 0 1.458.584 1.458 1.459Z" stroke="#222F5D" stroke-width=".875" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.833 16.625v1.75c0 .875-.583 1.458-1.458 1.458H3.5c.24 0 .484-.035.712-.11.064-.024.128-.047.192-.076.204-.082.403-.199.578-.35.052-.041.11-.094.163-.146l.023-.024 3.967-3.96h2.24c.875 0 1.458.583 1.458 1.458ZM2.806 19.729a2.237 2.237 0 0 1-.957-.578 2.237 2.237 0 0 1-.577-.957c.227.73.805 1.307 1.534 1.535Z" stroke="#222F5D" stroke-width=".875" stroke-linecap="round" stroke-linejoin="round"/><path d="m10.716 13.586-1.581 1.58-3.967 3.961c.409-.42.665-.997.665-1.627v-5.635l1.581-1.58c.618-.62 1.447-.62 2.065 0l1.237 1.236c.618.618.618 1.446 0 2.065ZM3.5 18.083a.583.583 0 1 0 0-1.167.583.583 0 0 0 0 1.167Z" stroke="#222F5D" stroke-width=".875" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="9.5" r="9.5" fill="#AFAFAF" fill-opacity=".29"/></svg></span>
-                                <span>رنگ محصول</span>
-                            </div>
-                            <span class="transition-all ease-in duration-300" :class="isOpenColor ? 'rotate-180' : '' ">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                    <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
-                                </svg>
-                            </span>
-                        </div>
-                        <!-- ACC content -->
-                        <div x-show="isOpenColor === true" class="flex flex-col gap-y-2">
-                            <label class="flex items-center py-1 gap-x-2 cursor-pointer" for="white">
-                                <input class="form-checkbox rounded text-orange-500 focus:ring-orange-500" type="checkbox" name="color" id="white">
-                                <span>سفید</span>
-                            </label>
-                            <label class="flex items-center py-1 gap-x-2 cursor-pointer" for="black">
-                                <input class="form-checkbox rounded text-orange-500 focus:ring-orange-500" type="checkbox" name="color" id="black">
-                                <span>مشکی</span>
-                            </label>
-                            <label class="flex items-center py-1 gap-x-2 cursor-pointer" for="blue">
-                                <input class="form-checkbox rounded text-orange-500 focus:ring-orange-500" type="checkbox" name="color" id="blue">
-                                <span>آبی</span>
-                            </label>
-                            <label class="flex items-center py-1 gap-x-2 cursor-pointer" for="green">
-                                <input class="form-checkbox rounded text-orange-500 focus:ring-orange-500" type="checkbox" name="color" id="green">
-                                <span>سبز</span>
-                            </label>
-                            <label class="flex items-center py-1 gap-x-2 cursor-pointer" for="red">
-                                <input class="form-checkbox rounded text-orange-500 focus:ring-orange-500" type="checkbox" name="color" id="red">
-                                <span>قرمز</span>
-                            </label>
-                        </div>
-                    </div>
-                    <!-- ACC. NO.3 -->
-                    <div class="">
-                        <!-- ACC header -->
-                        <div class="flex items-center justify-between w-full py-2 my-4 cursor-pointer hover:bg-gray-100 rounded-lg">
-                            <div class="flex items-center gap-x-2">
-                                <span>
-                                    <svg width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.523 7.904c-.245.239-.385.583-.35.95.053.63.63 1.091 1.26 1.091h1.109v.695a2.198 2.198 0 0 1-2.194 2.193H3.652a2.198 2.198 0 0 1-2.194-2.193V6.714c0-1.208.986-2.193 2.194-2.193h6.696c1.208 0 2.194.985 2.194 2.193v.84h-1.179c-.326 0-.624.128-.84.35Z" stroke="#222F5D" stroke-width=".875" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.458 7.239V4.573c0-.694.426-1.313 1.074-1.558l4.631-1.75c.724-.274 1.5.263 1.5 1.039V4.52M13.16 8.15v1.2c0 .322-.257.584-.584.596h-1.143c-.63 0-1.208-.461-1.26-1.091a1.172 1.172 0 0 1 .35-.95c.216-.222.513-.35.84-.35h1.213a.599.599 0 0 1 .583.594ZM4.083 7h4.084" stroke="#222F5D" stroke-width=".875" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                                <span>محدوده قیمت</span>
-                            </div>
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                    <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
-                                </svg>
-                            </span>
-                        </div>
-                        <!-- ACC content -->
-                        <div class="">
-                            <input class="w-full  accent-orange-500 h-10" type="range" min="1" max="100" value="50">
-                        </div>
-                        <!-- <div data-hs-range-slider='{
-                            "start": 50,
-                            "connect": "lower",
-                            "range": {
-                            "min": 0,
-                            "max": 100
-                            },
-                            "cssClasses": {
-                                "target": "relative h-2 rounded-full bg-gray-100 dark:bg-neutral-700",
-                                "base": "w-full h-full relative z-1",
-                                "origin": "absolute top-0 end-0 w-full h-full origin-[0_0] rounded-full",
-                                "handle": "absolute top-1/2 end-0 w-[1.125rem] h-[1.125rem] bg-white border-4 border-blue-600 rounded-full cursor-pointer translate-x-2/4 -translate-y-2/4 dark:border-blue-500",
-                                "connects": "relative z-0 w-full h-full rounded-full overflow-hidden",
-                                "connect": "absolute top-0 end-0 z-1 w-full h-full bg-blue-600 origin-[0_0] dark:bg-blue-500",
-                                "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
-                            }
-                        }'></div> -->
-                    </div>
+    <!-- mobile product info -->
+    <div class="text-slate-700 font-bold bg-white md:bg-none md:p-0 rounded-lg p-4">
+        <!-- info tabs -->
+        <div class="info__tab-container text-sm w-auto mx-auto flex items-center justify-between gap-x-1 p-[2px] mb-8 text-slate-400 font-medium bg-gray-100 rounded-3xl border">
+            <button class="info__tab info__tab-1 flex-1 cursor-pointer text-center py-2 px-4" data-tab="1">دوربین</button>
+            <button class="info__tab info__tab-2 flex-1 cursor-pointer text-center py-2 px-4 text-slate-800 bg-white rounded-3xl shadow-md" data-tab="2">طراحی</button>
+            <button class="info__tab info__tab-3 flex-1 cursor-pointer text-center py-2 px-4" data-tab="3">باتری</button>
+        </div>
+        <!-- info contents -->
+        <div class="info__contents">
+            <div class="info__content info__content--1 hidden">
+                <span class="mb-5 inline-block text-lg">دوربین</span>
+                <div class="text-xs font-normal text-justify leading-7">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
                 </div>
             </div>
-            <div class="sidebar-close-btn flex items-center gap-x-4 p-4">
-                <button class="text-base font-medium rounded-md w-full p-2 bg-orange-500 text-white">تایید</button>
-                <button class="text-base font-medium rounded-md w-full p-2 text-orange-500 border-2 border-orange-500">لغو فیلتر</button>
+            <div class="info__content info__content--2 active">
+                <span class="mb-5 inline-block text-lg">طراحی</span>
+                <div class="text-xs font-normal text-justify leading-7">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد.
+                </div>
+            </div>
+            <div class="info__content info__content--3 hidden">
+                <span class="mb-5 inline-block text-lg">باتری</span>
+                <div class="text-xs font-normal text-justify leading-7">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت دشواری موجود در ارائه راهکار اساسا مورد استفاده قرار گیرد.
+                </div>
             </div>
         </div>
     </div>
-
-    <script src="../public/js/catagories.js"></script>
+    <script src="../public/js/tamrin.js"></script>
 </body>
 </html>
