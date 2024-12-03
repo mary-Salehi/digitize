@@ -8,6 +8,10 @@ const moreTextBtn = document.querySelector('.more-text-btn');
 const reviewShortTxt = document.querySelector('.review__short-text');
 const reviewFulltTxt = document.querySelector('.review__full-text');
 
+const quickAccessSidebar = document.querySelector('.quick-access');
+const navbar = document.querySelector('.navbar');
+console.log(navbar);
+
 moreTextBtn.addEventListener('click' , function() {
     if (reviewFulltTxt.classList.contains('hidden')) {
         reviewFulltTxt.classList.remove('hidden');
@@ -27,5 +31,20 @@ tabsContainer.addEventListener('click' , function(e) {
         const targetContent = document.querySelector(`.info__content--${clicked.dataset.tab}`).classList.remove('hidden');
     }
 });
+
+// quick accessibility scroll
+
+quickAccessSidebar.addEventListener('click' , function(e) {
+    if(e.target.classList.contains('quick-access__link')) {
+        const id = e.target.getAttribute('href');
+        console.log(id);
+        const target = document.querySelector(id)
+        console.log(target);
+        const navHeight = navbar.offsetHeight;
+        target.classList.add(`${navHeight === 88 ? 'scroll-mt-[108px]' : 'scroll-mt-[124px]' }`)
+        target.scrollIntoView({behavior: 'smooth'});
+    }
+})
+
 
 
