@@ -22,7 +22,6 @@ moreTextBtn.addEventListener('click' , function() {
 tabsContainer.addEventListener('click' , function(e) {
     console.log('it works');
     const clicked = e.target;
-    console.log(clicked);
     if (clicked.classList.contains('info__tab')) {
         tabsBtn.forEach(tab => tab.classList.remove('text-slate-800' , 'bg-white', 'rounded-3xl', 'shadow-md'));
         clicked.classList.add('text-slate-800' , 'bg-white', 'rounded-3xl', 'shadow-md');
@@ -37,11 +36,9 @@ tabsContainer.addEventListener('click' , function(e) {
 quickAccessSidebar.addEventListener('click' , function(e) {
     if(e.target.classList.contains('quick-access__link')) {
         const id = e.target.getAttribute('href');
-        console.log(id);
-        const target = document.querySelector(id)
-        console.log(target);
+        const target = document.querySelector(id);
         const navHeight = navbar.offsetHeight;
-        target.classList.add(`${navHeight === 88 ? 'scroll-mt-[108px]' : 'scroll-mt-[124px]' }`)
+        target.classList.add(`${navHeight === 88 ? 'scroll-mt-[108px]' : 'scroll-mt-[124px]' }`);
         target.scrollIntoView({behavior: 'smooth'});
     }
 })
